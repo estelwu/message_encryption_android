@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--Original Message-->
+    <TextView
+        android:id="@+id/tvOriginalMessageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvEncryptedMessageLabel"
+        android:text="Original: "
+        />
+    <TextView
+        android:id="@+id/tvOriginalMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tvOriginalMessageLabel"/>
+
+    <!--Encrypted Message-->
+    <TextView
+        android:id="@+id/tvEncryptedMessageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encrypted: "
+        app:layout_constraintTop_toBottomOf="@id/tvOriginalMessageLabel"/>
+    <TextView
+        android:id="@+id/tvEncryptedMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvOriginalMessage"
+        app:layout_constraintLeft_toRightOf="@id/tvEncryptedMessageLabel"/>
+
+    <!--Decrypted Message-->
+    <TextView
+        android:id="@+id/tvDecryptedMessageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrypted: "
+        app:layout_constraintTop_toBottomOf="@id/tvEncryptedMessageLabel"
+        />
+    <TextView
+        android:id="@+id/tvDecryptedMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tvDecryptedMessageLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvEncryptedMessage"/>
+
+</android.support.constraint.ConstraintLayout>
